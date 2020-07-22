@@ -9,8 +9,10 @@
 # Micircle file upload
 /micirclefileupload/build
 /micirclefileupload/libs
+/micirclefileupload/src/main/java/com/example/mymodule/micirclefileupload/dataLayer/common/Constants.java
 
 
 # Micircle WS
 /micirclews/build
 /micirclews/libs
+/micirclews/src/main/java/com/example/mymodule/businessObject/common/Constants.java
