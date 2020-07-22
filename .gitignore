@@ -1,0 +1,16 @@
+.gradle
+/gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+*.log
+
+# Micircle file upload
+/micirclefileupload/build
+/micirclefileupload/libs
+
+
+# Micircle WS
+/micirclews/build
+/micirclews/libs

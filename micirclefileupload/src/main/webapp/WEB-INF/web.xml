@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+    <servlet>
+        <servlet-name>ImgUploadForCircle</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.circle.ImgUploadForCircle</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImgUpload</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.userProfile.ImgUpload</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Serve</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.Serve</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServeShort</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.ServeShort</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImgUploadPath</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.userProfile.ImgUploadPath</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImgUploadPathForCircle</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.circle.ImgUploadPathForCircle</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadPathForLocation</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.location.ImgUploadPathForLocation</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadForLocation</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.location.ImgUploadForLocation</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadPathForNotification</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.notification.ImgUploadPathForNotification</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadNotification</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.notification.ImgUploadNotification</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadPathForPanic</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.panic.ImgUploadPathForPanic</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadForPanic</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.panic.PanicInitiate</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadPathForFeed</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.feed.ImgUploadPathForFeed</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ImgUploadForFeed</servlet-name>
+        <servlet-class>com.example.mymodule.micirclefileupload.controller.feed.ImgUploadForFeed</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ImgUploadForCircle</servlet-name>
+        <url-pattern>/uploadImgCircle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadForLocation</servlet-name>
+        <url-pattern>/uploadImgLocation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUpload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadForPanic</servlet-name>
+        <url-pattern>/uploadImgPanic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Serve</servlet-name>
+        <url-pattern>/serve</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServeShort</servlet-name>
+        <url-pattern>/serveShort</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadPath</servlet-name>
+        <url-pattern>/imguploadpath</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadPathForCircle</servlet-name>
+        <url-pattern>/imgUploadPathForCircle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadPathForLocation</servlet-name>
+        <url-pattern>/imgUploadPathForLocation</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ImgUploadPathForNotification</servlet-name>
+        <url-pattern>/imgUploadPathForNotification</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImgUploadNotification</servlet-name>
+        <url-pattern>/imgUploadNotification</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ImgUploadPathForPanic</servlet-name>
+        <url-pattern>/imgUploadPathForPanic</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ImgUploadPathForFeed</servlet-name>
+        <url-pattern>/imgUploadPathForFeed</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ImgUploadForFeed</servlet-name>
+        <url-pattern>/uploadImgFeed</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

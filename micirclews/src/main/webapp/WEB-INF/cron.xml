@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    <cron>
+        <url>/cron/gaejcronjob</url>
+        <description>GAEJExperiments Cron Job that simply announces that it got invoked.</description>
+        <schedule>every 360 minutes</schedule>
+    </cron>
+
+    <cron>
+        <url>/cron/etiucronjob</url>
+        <!-- <target>test</target> -->
+        <description>Send email to all inactive users with suggestion from contacts.</description>
+        <schedule>every 160 hours</schedule>
+    </cron>
+</cronentries>

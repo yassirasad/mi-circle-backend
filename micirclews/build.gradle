@@ -1,0 +1,77 @@
+// Currently, the appengine gradle plugin's appengine devappserver launch doesn't interact well with Intellij/AndroidStudio's
+// Gradle integration.  As a temporary solution, please launch from the command line.
+// ./gradlew modulename:appengineRun
+// If you would like more information on the gradle-appengine-plugin please refer to the github page
+// https://github.com/GoogleCloudPlatform/gradle-appengine-plugin
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()    // Bintray's repository - a fast Maven Central mirror & more
+    }
+    dependencies {
+        // Endpoints Frameworks Gradle plugin
+        classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:1.0.2'
+        // App Engine Gradle plugin
+        classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.3.3'
+        //classpath 'com.google.appengine:gradle-appengine-plugin:1.9.59'
+    }
+}
+
+repositories {
+    mavenCentral();
+    jcenter();
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+//apply plugin: 'appengine'
+apply plugin: 'com.google.cloud.tools.appengine'
+apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+
+dependencies {
+    //appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.59'
+    //compile 'com.google.appengine:appengine-endpoints:1.9.59'
+    //compile 'com.google.appengine:appengine-endpoints-deps:1.9.59'
+    compile 'com.google.endpoints:endpoints-framework:2.0.9'
+    compile 'javax.inject:javax.inject:1'
+    compile 'com.googlecode.objectify:objectify:5.0.3'
+    compile 'javax.servlet:servlet-api:2.5'
+    compile 'commons-fileupload:commons-fileupload:1.3.3'
+    compile 'commons-io:commons-io:2.6'
+    compile 'javax.jdo:jdo-api:3.0.1'
+    compile 'org.igniterealtime:rest-api-client:1.1.3'
+    compile files('libs/mysql-connector-java-3.0.17-ga-bin.jar')
+    compile files('libs/mysql-connector-java-5.1.23-bin.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/gcm.server.jar')
+    compile files('libs/httpclient-4.3-beta1.jar')
+    compile files('libs/java-json.jar')
+    compile files('libs/apache-httpcomponents-httpcore.jar')
+    compile files('libs/org.restlet.gae-2.0-RC3.jar')
+    compile files('libs/org.restlet.ext.jaxrs-2.0-RC3.jar')
+    compile 'com.google.maps:google-maps-services:0.1.15'
+    compile 'com.google.appengine:appengine-api-labs:1.7.4'
+}
+
+//appengine {
+//    downloadSdk = true
+//    appcfg {
+//        email = "admin@stopnsolve.com"
+//        noCookies = true
+//        oauth2 = true
+//    }
+//    endpoints {
+//        getClientLibsOnBuild = true
+//        getDiscoveryDocsOnBuild = true
+//    }
+//}
+
+endpointsServer {
+    // Endpoints Framework Plugin server-side configuration
+    hostname = "mi-circle.appspot.com"
+}

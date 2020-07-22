@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+   <servlet>
+        <servlet-name>EndpointsServlet</servlet-name>
+        <servlet-class>com.google.api.server.spi.EndpointsServlet</servlet-class>
+        <init-param>
+            <param-name>services</param-name>
+            <param-value>com.example.mymodule.controller.MyEndpoint,
+                com.example.mymodule.controller.userProfile.UserEndpoint,
+                com.example.mymodule.controller.userProfile.UserContactEndpoint,
+                com.example.mymodule.controller.userProfile.EmailEndpoint,
+                com.example.mymodule.controller.circle.CircleEndpoint,
+                com.example.mymodule.controller.location.LocationEndpoint,
+                com.example.mymodule.controller.friend.FriendEndpoint,
+                com.example.mymodule.controller.notfication.NotificationEndpoint,
+                com.example.mymodule.controller.panic.PanicEndpoint,
+                com.example.mymodule.controller.openfireService.OpenfireEndpoint,
+                com.example.mymodule.controller.feed.FeedEndpoint
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EndpointsServlet</servlet-name>
+        <url-pattern>/_ah/api/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GAEJCronServlet</servlet-name>
+        <servlet-class>com.example.mymodule.controller.cronJobs.CronEndpoint</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GAEJCronServlet</servlet-name>
+        <url-pattern>/cron/gaejcronjob</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EmailToInactiveServlet</servlet-name>
+        <servlet-class>com.example.mymodule.controller.cronJobs.EmailToInactiveCron</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmailToInactiveServlet</servlet-name>
+        <url-pattern>/cron/etiucronjob</url-pattern>
+    </servlet-mapping>
+    
+   <!-- <servlet>
+        <servlet-name>RestletServlet</servlet-name>
+        <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+        <init-param>
+            <param-name>org.restlet.application</param-name>
+            <param-value>com.example.mymodule.controller.common.MiCircleJaxRsApplication</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RestletServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+-->
+
+    <servlet>
+        <servlet-name>LoginFeed</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.LoginFeed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginFeed</servlet-name>
+        <url-pattern>/feed/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutFeed</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.LogoutFeed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutFeed</servlet-name>
+        <url-pattern>/feed/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Feeds</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.Feeds</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Feeds</servlet-name>
+        <url-pattern>/feed</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateFeed</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.CreateFeed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateFeed</servlet-name>
+        <url-pattern>/feed/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditFeed</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.EditFeed</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditFeed</servlet-name>
+        <url-pattern>/feed/edit/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServeVideo</servlet-name>
+        <servlet-class>com.example.mymodule.controller.feed.ServeVideo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServeVideo</servlet-name>
+        <url-pattern>/feed/video</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.example.mymodule.controller.feed.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/feed</url-pattern>
+        <url-pattern>/feed/create</url-pattern>
+        <url-pattern>/feed/edit/*</url-pattern>
+    </filter-mapping>
+
+    <!--
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+    -->
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,178 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  color:#008364
+}
+
+/* For Thumbnail preview*/
+#t-preview {
+	max-width: 200px;
+	max-height: 200px;
+	padding: 5px;
+	margin-left: 25px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#t-div {
+    display: none;
+}
+
+.header {
+  display: flex;
+}
+
+.header a {
+  float: left;
+  color: black;
+  align-self: center;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.header a.logo img{
+   height:60px;
+   width: 150px;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+  align-self: center;
+}
+
+.profile .btn{
+  border-radius: 0px;
+  background: none;
+}
+
+#nav-create-feed {
+   background-color: #2bb788;
+   color: #ffffff;
+}
+
+.theme-showcase{
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px grey;
+}
+
+.marg{
+  margin: 20px 0px;
+}
+
+.dropdown a{
+  padding: 5px;
+}
+
+.dropdown a:hover{
+  background-color: #2bb788;
+  color: #ffffff;
+}
+
+.dropdown-menu{
+  border-radius: 0px;
+  border: none;
+}
+
+.login-marg{
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.login-img{
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+
+.card{
+	margin: 0 1rem 1rem 1rem;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);*/
+	/*background-color: #e4e3e8;*/
+}
+
+.border-custom{
+	/*border-color: #2bb788;*/
+}
+
+.card-body{
+	padding: 0.25rem;
+}
+
+.card-footer{
+	padding: 0;
+}
+
+.card-title{
+		margin-top: 0.5rem;
+}
+
+.card-footer-items{
+	text-align: center;
+}
+
+#feed-image{
+	max-width: 220px;
+	max-height: 130px;
+	padding: 5px;
+	margin: 0 1rem 0 0;
+}
+
+#feed-video{
+	width: 220px;
+	height: 130px;
+	margin: 0 1rem 0 0;
+}
+
+#creator-name{
+	color: #008364;
+}
+
+#category-name{
+	text-align: right;
+}
+
+#loading{
+	text-align: center;
+}
+
+#error-message{
+	text-align: center;
+	display: none;
+}
+
+
+footer{
+  background-color: #2bb788;
+}
+
+footer p{
+  margin: 0px;
+  padding: 20px 0px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
